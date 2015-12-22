@@ -39,24 +39,3 @@
     padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
 
 }
-
-@mixin tag($bg) {
-    display: inline-block;
-    padding: 0.3em 0.6em;
-    background-color: $bg;
-    position: relative;
-    margin: 0 0 0 0.9em;
-    line-height: 1.17;
-
-    &:before {
-        content: '';
-        position: absolute;
-        height: 1.25em;
-        width: 1.25em;
-        top: 0;
-        left: 0;
-        transform-origin: top left;
-        transform: rotate(45deg);
-        z-index: -1;
-    }
-}

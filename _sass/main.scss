@@ -255,23 +255,6 @@
         }
     }
 
-    .tag{
-        @include tag('#FFFFFF');
-        //color: $text
-        text-decoration: none;
-        margin: 0.5em 0.5em 0.5em 1.4em;
-        
-        &:hover {
-            top: -1px;
-            @include tag('#c5c5c5');
-            margin: 0.5em 0.5em 0.5em 1.4em;
-        }
-
-        &:active {
-            top: 1px ;
-        }
-    }
-
 
 /* Form */
 
