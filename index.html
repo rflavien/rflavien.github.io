@@ -58,7 +58,7 @@ layout: homepage
             <div class="4u 12u$(medium)">
                 <span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
                 <h3>{{ post.title }}</h3>
-                <p>{{ post.content | strip_html | truncatewords:65 }}</p>
+                <p>{{ post.content | strip_html | truncatewords:35 }}</p>
                 <ul class="actions">
                     <li><a href="{{ post.url | prepend: site.baseurl }}" class="button">Lire</a></li>
                 </ul>
