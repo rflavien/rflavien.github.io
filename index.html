@@ -54,30 +54,16 @@ layout: homepage
         </header>
         <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
         <div class="row 150%">
-            <div class="4u 12u$(medium)">
-                <span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
-                <h3>Magna feugiat lorem</h3>
-                <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-                <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
-                </ul>
-            </div>
+            {% for post in site.posts limit: 3 %}
             <div class="4u 12u$(medium)">
                 <span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
-                <h3>Magna feugiat lorem</h3>
-                <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.content | strip_html | truncatewords:65 }}</p>
                 <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
+                    <li><a href="{{ post.url | prepend: site.baseurl }}" class="button">Lire</a></li>
                 </ul>
             </div>
-            <div class="4u$ 12u$(medium)">
-                <span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-                <h3>Magna feugiat lorem</h3>
-                <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-                <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
-                </ul>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -95,23 +81,3 @@ layout: homepage
         </ul>
     </div>
 </section>
-
-<!--div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div-->
