@@ -56,7 +56,7 @@ layout: homepage
         <div class="row 150%">
             {% for post in site.posts limit: 3 %}
             <div class="4u 12u$(medium)">
-                <span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
+                <span class="image fit"><img src="images/{{ post.banner }}" alt="" /></span>
                 <h3>{{ post.title }}</h3>
                 <p>{{ post.content | strip_html | truncatewords:25 }}</p>
                 <ul class="actions">
