@@ -9,10 +9,10 @@ Dans ce petit guide nous allons créer un serveur Node.js et le faire tourner gr
 
 Dans un premier temps nous créons notre projet :
 {% highlight bash %}
-mkdir node_serveur_project && touch $\_/server.js
+mkdir node_serveur_project && touch $_/server.js
 {% endhighlight %}
 
-Le fichier node_serveur_project/server.js doit contenir un serveur tel que :
+Le fichier __node_serveur_project/server.js__ doit contenir un serveur tel que :
 {% highlight javascript %}
 var http = require('http');
 
@@ -28,7 +28,7 @@ Notre projet est maintenant terminé, nous voulons l'installer sur un serveur.
 
 > Avant de continuer, assurez vous d'avoir Docker installé sur votre machine.
 
-Rendons nous dans le dossier node_serveur_project et connectons nous à un container grace à la commande suivante :
+Rendons-nous dans le dossier node_serveur_project et connectons nous à un container grace à la commande suivante :
 
 {% highlight bash %}
 docker run --rm -ti -w /srv -p 8080:8080 -v $PWD:/srv node /bin/bash
