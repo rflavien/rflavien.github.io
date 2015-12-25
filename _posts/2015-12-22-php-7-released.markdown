@@ -3,6 +3,7 @@ layout: post
 title:  "PHP 7 is released !"
 date:   2015-12-22 17:11:54
 categories: PHP
+banner: php7.jpg
 ---
 Les nouveautés et des benchmarks de php 7.
 
