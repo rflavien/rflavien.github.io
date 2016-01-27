@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 170 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" height="200" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 170 100" enable-background="new 0 0 100 100" xml:space="preserve">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Poiret+One);
     </style>
@@ -9,5 +9,5 @@
     <g><polygon fill="#06AED5" points="41.2,58.3 22.8,68.2 4.4,58.3 22.8,48.4  "/></g>
     <g><polygon fill="#06AED5" points="41.2,37.6 22.8,47.5 4.4,37.6 22.8,27.6  "/></g>
     <text xmlns="http://www.w3.org/2000/svg" x="95" y="55" fill="#086788" font-size="20px" font-weight="bold" font-family="'Poiret One', Helvetica, Arial-Unicode, Arial, Sans-serif">io</text>
-    <text xmlns="http://www.w3.org/2000/svg" x="113" y="55" fill="#06AED5" font-size="20px" font-weight="bold" font-family="'Poiret One', Helvetica, Arial-Unicode, Arial, Sans-serif">thing</text>
+    <text xmlns="http://www.w3.org/2000/svg" x="110" y="55" fill="#06AED5" font-size="20px" font-weight="bold" font-family="'Poiret One', Helvetica, Arial-Unicode, Arial, Sans-serif">thing</text>
 </svg>
