@@ -1,10 +1,260 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>iothing, a Node.js framework for IoT</title>
-    </head>
-    <body>
-        <img src="images/iothing-logo.svg" alt="iothing logo" style="height:200px;margin:20px auto" />
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>iothing | Documentation</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <link rel="stylesheet" href="css/_all-skins.min.css">
+    <link rel="stylesheet" href="css/style-iothing.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+    <div class="wrapper">
+
+      <header class="main-header">
+        <!-- Logo -->
+        <!-- Logo -->
+        <a href="/iothing" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>IO</b>T</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>io</b>thing</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li><a href="https://www.npmjs.com/package/iothing" target="_blank">view on npm</a></li>
+              <li><a href="https://github.com/rflavien/iothing" target="_blank">view on GitHub</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <div class="sidebar" id="scrollspy">
+
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="nav sidebar-menu">
+            <li class="header">TABLE OF CONTENTS</li>
+            <li class="treeview" id="scrollspy-overview">
+              <a href="javascript::;"><i class="fa fa-circle-o"></i> Overview</a>
+              <ul class="nav treeview-menu">
+                <li><a href="#overview-introduction">Introduction</a></li>
+                <li><a href="#overview-philosophy">Philosophy</a></li>
+                <li><a href="#overview-dependencies">Dependencies</a></li>
+              </ul>
+            </li>
+            <li class="treeview" id="scrollspy-gettingStarted">
+              <a href="javascript::;"><i class="fa fa-circle-o"></i> Getting started</a>
+              <ul class="nav treeview-menu">
+                <li><a href="#gettingStarted-installation">Installation</a></li>
+                <li><a href="#gettingStarted-configuration">Configuration</a></li>
+                <li><a href="#gettingStarted-simpleExample">Simple example</a></li>
+              </ul>
+            </li>
+            <li class="treeview" id="scrollspy-basics">
+              <a href="javascript::;"><i class="fa fa-circle-o"></i> The Basics</a>
+              <ul class="nav treeview-menu">
+                <li><a href="#basics-action">Action</a></li>
+                <li><a href="#basics-event">Event</a></li>
+                <li><a href="#basics-cron">Cron</a></li>
+              </ul>
+            </li>
+            <li class="treeview" id="scrollspy-gpios">
+              <a href="javascript::;"><i class="fa fa-circle-o"></i> The GPIOs</a>
+              <ul class="nav treeview-menu">
+                <li><a href="#gpios-configuration">Configuration</a></li>
+                <li><a href="#gpios-management">Management</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <h1>
+            iothing documentation
+            <small>Current version 0.0.5 (beta)</small>
+          </h1>
+        </div>
+
+        <!-- Main content -->
+        <div class="content body">
+            <div class="callout callout-warning lead">
+              <h4>This is a Beta version!</h4>
+              <p>
+                Fell free to test this beta version, please send your feedbacks on GitHub issues.
+              </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="info-box">
+                    <a href="https://www.npmjs.com/package/iothing" target="_blank"><span class="info-box-icon bg-red"><img src="images/npm-logo.svg" width="70px"/></span></a>
+                    <div class="info-box-content">
+                      <span class="info-box-text">Downloads</span>
+                      <span class="info-box-number" id="npm-downloads">100</span>
+                    </div><!-- /.info-box-content -->
+                  </div><!-- /.info-box -->
+                </div><!-- /.col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="info-box">
+                    <a href="https://github.com/rflavien/iothing" target="_blank"><span class="info-box-icon bg-grey"><img src="images/github-logo.svg" width="50px"/></span></a>
+                    <div class="info-box-content">
+                        <!--span class="info-box-text">Stars</span>
+                        <span class="info-box-number" id="github-stars">1</span-->
+                        <span class="info-box-text">Last commit</span>
+                        <span class="info-box-number" id="github-lastCommit">1</span>
+                    </div><!-- /.info-box-content -->
+                  </div><!-- /.info-box -->
+                </div><!-- /.col -->
+
+            </div>
+
+            <section id="overview" data-spy="scroll" data-target="#scrollspy-overview">
+                <h2 class="page-header"><a href="#components">Overview</a></h2>
+                <h3 id="overview-introduction">Introduction</h3>
+                <p class="lead">
+                  <b>Iothing</b> is a node.js framework open source for easy IoT developements.
+                  It is designed to be used on boards like the Raspbery or the Intel Galileo.
+                  It provide some usefull features like an event manager, a cron manager and a GPIOs standard interface.
+                  It also provide an API to pilote and monitor your connected object.
+                </p>
+                <h3 id="overview-philosophy">Philosophy</h3>
+                <p class="lead">
+                  Let's assume that our board with the plugged GPIOs is a thing. Iothing is created to add some fonctionality to it, that's why the framework is based on the decorator design pattern.
+                  We also want to create some connected objects without writting to much code, we prefer generate the application code from configurations files.
+                </p>
+                <h3 id="overview-dependencies">Dependencies</h3>
+                <p class="lead">Iothing depends on npm modules. Here is the complete list.</p>
+                <ul class="bring-up">
+                  <li><a href="https://www.npmjs.com/package/cron" target="_blank">cron</a></li>
+                </ul>
+            </section>
+
+            <section id="gettingStarted" data-spy="scroll" data-target="#scrollspy-gettingStarted">
+                <h2 class="page-header"><a href="#gettingStarted">Getting Started</a></h2>
+                <h3 id="gettingStarted-installation">Installation</h3>
+                <pre class="prettyprint"><code class="bash">npm install iothing</code></pre>
+                <h3 id="gettingStarted-configuration">Configuration</h3>
+                <p class="lead">To configure your application you must create a folder named <b>config</b> at the root of your project.</p>
+                <h4>Thing configuration</h4>
+                <div class="callout callout-info lead">
+                  <h4>Comming soon!</h4>
+                  <p>
+                    In this file we will be able to declare our actions, describe crons and create listeners.
+                  </p>
+                </div>
+                <p>In the file <b>config/thing.js</b></p>
+                <pre class="prettyprint"><code class="bash">module.exports = {
+    name: 'my object',
+    ip: '127.0.0.1',
+    gpios: [
+        {name: 'light', pin :1}
+    ]
+}</code></pre>
+                <ul>
+                    <li><b>name</b> : the name of your thing</li>
+                    <li><b>ip</b> : the IP of your thing</li>
+                    <li><b>gpios</b> : the list of all your GPIOs</li>
+                </ul>
+                <h3 id="gettingStarted-simpleExample">Simple example</h3>
+                <pre class="prettyprint"><code class="bash">// Loading the Framework
+var iothing = require('iothing')
+// Getting the thing instance
+var thing = iothing.get('thingInstance')
+
+// You can manage you gpio by overriding the value function
+thing.gpio({"pin":1}).value = function(value) {
+    if (typeof value === 'undefined') {
+        return "light is off"
+    }
+    return "light is on"
+}
+
+// Then access your gpios
+console.log(thing.gpio({"pin":1}).value())
+
+// You can attach actions to your thing
+thing.action('turn-on-garden-lights', function() {
+    console.log(thing.gpio({"pin":1}).value(1))
+})
+
+// You can attach crons to your thing
+thing.cron('nights', '00 * * * * *', function () {
+    // the thing can emit events
+    thing.emit('night')
+})
+
+// You can attach listeners to your thing
+thing.on('night', function () {
+    thing.run('turn-on-garden-lights')
+})</code></pre>
+            </section>
+
+            <section id="basics" data-spy="scroll" data-target="#scrollspy-basics">
+                <h2 class="page-header"><a href="#basics">The basics</a></h2>
+                <h3 id="basics-action">Action</h3>
+                <h3 id="basics-event">Event</h3>
+                <h3 id="basics-cron">Cron</h3>
+            </section>
+
+            <section id="gpios" data-spy="scroll" data-target="#scrollspy-gpios">
+                <h2 class="page-header"><a href="#gpios">The GPIOs</a></h2>
+                <h3 id="gpios-configuration">Configuration</h3>
+                <h3 id="gpios-management">Management</h3>
+            </section>
+
+        </div><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 0.0.5 (beta)
+        </div>
+        <strong>Copyright &copy; 2016 <a href="http://rflavien.github.io">Flavien Rodrigues</a>.</strong> All rights reserved.
+      </footer>
+
+    </div><!-- ./wrapper -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="js/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="js/app.min.js"></script>
+    <!-- SlimScroll 1.3.0 -->
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="js/docs.js"></script>
+  </body>
 </html>
