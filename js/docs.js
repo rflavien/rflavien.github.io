@@ -3,7 +3,7 @@
  */
 $(function () {
 
-    $.get( "https://api.npmjs.org/downloads/point/last-day/iothing", function( data ) {
+    $.get( "https://api.npmjs.org/downloads/point/last-month/iothing", function( data ) {
       $( "#npm-downloads" ).html( data.downloads );
     });
     // $.get( "https://api.github.com/repos/rflavien/iothing", function( data ) {
