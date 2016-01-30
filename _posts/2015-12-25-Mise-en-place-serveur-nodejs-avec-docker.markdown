@@ -33,9 +33,7 @@ Rendons-nous dans le dossier node_serveur_project et connectons nous à un conta
 {% highlight bash %}
 docker run --rm -v $PWD:/srv -w /srv -p 80:8080 -ti node /bin/bash
 {% endhighlight %}
-
-Description de la commande :    
-
+ 
 - __docker run__ : permet de lancer une commande dans un container
 - __--rm__ : permet de suprimer le container à la fin de l'utilisation
 - __-v $PWD:/srv__ : monte le repertoire courant dans le dossier /srv du container
