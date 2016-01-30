@@ -31,8 +31,19 @@ Notre projet est maintenant terminé, nous voulons l'installer sur un serveur.
 Rendons-nous dans le dossier node_serveur_project et connectons nous à un container grace à la commande suivante :
 
 {% highlight bash %}
-docker run --rm -ti -w /srv -p 8080:8080 -v $PWD:/srv node /bin/bash
+docker run --rm -v $PWD:/srv -w /srv -p 80:8080 -ti node /bin/bash
 {% endhighlight %}
+
+Description de la commande :    
+- __docker run__ : permet de lancer une commande dans un container
+- __--rm__ : permet de suprimer le container à la fin de l'utilisation
+- __-v $PWD:/srv__ : monte le repertoire courant dans le dossier /srv du container
+- __-w /srv__ : indique le dossier de travail dans le container
+- __-p 80:8080__ : lie le port 8080 du container sur le port 80 de l'hôte
+- __-t__ : alloue un terminal (pseudo-TTY)
+- __-i__ : mode interactif, conserve le flux d'entrées ouvert (STDIN)
+- __node__ : l'image a partir de laquelle créer le container
+- __/bin/bash__ : la commande a executer
 
 Vous vous trouvez actuellement dans un container disposant de Node.js.
 {% highlight bash %}
