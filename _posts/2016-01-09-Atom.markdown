@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "Liste d'extensions utiles pour Atom"
+date:   2016-01-09 18:14:00
+categories: software
+banner: atom.png
+---
+Atom est un éditeur de texte développé par GitHub. Ca simplicité, ca légéreté et la possibilité d'ajouter des extensions en fait un outil très pertinent pour le développement.
+
+Je vous partage dans cet article une liste d'extensions pratiques (liste que j'actualiserais au cours de mes découvertes).
+
+## Ergonomie
+
+### File icons
+Cette extension remplace les icons dans votre arborescence de fichiers en fonction de l'extension des fichiers.
+{% highlight bash %}
+apm install file-icons
+{% endhighlight %}
+<a href='https://atom.io/packages/file-icons' target='_blank'>Voir la page de l'extension</a>
+
+### Highlight selected
+Cette extension met en évidence les occurences d'une selection dans votre fichier.
+{% highlight bash %}
+apm install highlight-selected
+{% endhighlight %}
+<a href='https://atom.io/packages/highlight-selected' target='_blank'>Voir la page de l'extension</a>
+
+### Minimap
+Cette extension ajoute une vue global de votre fichier dans un pannel, vous permettant de vous déplacer dans de long fichiers plus rapidement.
+{% highlight bash %}
+apm install minimap
+{% endhighlight %}
+<a href='https://atom.io/packages/minimap' target='_blank'>Voir la page de l'extension</a>
+
+### Tree view Git branch
+Cette extension vous permet de visualiser votre branche de travail ainsi que d'en changer.
+{% highlight bash %}
+apm install tree-view-git-branch
+{% endhighlight %}
+<a href='https://atom.io/packages/tree-view-git-branch' target='_blank'>Voir la page de l'extension</a>
+
+## Intégration
+
+### Emmet
+Cette extension vous permet d'utiliser Emmet dans Atom afin de générer du code HTML grace à la syntaxe CSS.
+{% highlight bash %}
+apm install emmet
+{% endhighlight %}
+<a href='https://atom.io/packages/emmet' target='_blank'>Voir la page de l'extension</a>
+
+## Utilitaire
+
+### Rest client
+Cette extension vous permet de faire des requetes HTTP (même principe que Postman) depuis Atom.
+{% highlight bash %}
+apm install rest-client
+{% endhighlight %}
+<a href='https://atom.io/packages/rest-client' target='_blank'>Voir la page de l'extension</a>
