@@ -2533,7 +2533,7 @@ button,
     background-color: #333;
     color: rgba(255, 255, 255, 0.75);
     background-attachment: fixed,							fixed;
-    background-image: url("images/overlay1.png"), url("../../images/header_1.jpg");
+    background-image: url("images/overlay1.png"), url("../../images/homepage/header_1.jpg");
     background-size: auto,							cover; }
     .main.style2 a {
       border-bottom-color: rgba(255, 255, 255, 0.5); }
