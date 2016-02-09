@@ -1,0 +1,17 @@
+<div id="dl-menu" class="dl-menuwrapper">
+    <button class="dl-trigger">Open Menu</button>
+    <ul class="dl-menu">
+        {% for menu in site.data.menu %}
+            <li>
+                <a href="{{ menu.url }}">{{ menu.label }}</a>
+                {% if menu.submenu %}
+                    <ul class="dl-submenu">
+                        {% for menu in menu.submenu %}
+                            <a href="{{ menu.url }}">{{ menu.label }}</a>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div><!-- /dl-menuwrapper -->
