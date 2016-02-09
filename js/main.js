@@ -41,8 +41,9 @@
 			});
 
 		// Scrolly.
-			$('.scrolly').scrolly();
+		// $('.scrolly').scrolly();
 
+		$( '#dl-menu' ).dlmenu();
 	});
 
 })(jQuery);
